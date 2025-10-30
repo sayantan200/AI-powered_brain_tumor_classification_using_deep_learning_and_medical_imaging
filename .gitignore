@@ -194,3 +194,27 @@ checkpoints/
 results/
 outputs/
 predictions/
+
+# Project-specific large artifacts
+dataset/**
+!dataset/README.md
+
+models/**/*.keras
+models/**/*.onnx
+models/**/*.tflite
+models/**/*.bin
+models/**/*.npz
+models/**/*.npy
+
+# Training logs and tensorboard
+models/tblogs/**
+models/tensorboard/**
+**/events.out.tfevents.*
+
+# Generated plots and reports
+models/plots/**
+reports/**
+
+# Large text artifacts
+*.csv
+*.tsv

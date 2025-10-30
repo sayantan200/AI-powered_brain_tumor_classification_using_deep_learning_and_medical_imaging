@@ -1,0 +1,32 @@
+paths:
+  train_dir: dataset/Training
+  test_dir: dataset/Testing
+  val_split: 0.15
+
+class_names:
+  - glioma_tumor
+  - meningioma_tumor
+  - pituitary_tumor
+  - no_tumor
+
+images:
+  allowed_exts: [".jpg", ".jpeg", ".png", ".bmp", ".dcm"]
+  color_mode: rgb
+  target_size: [224, 224]
+
+dicom:
+  enabled: true
+  rescale: true
+  windowing: false
+
+augmentation:
+  enabled: true
+  horizontal_flip: true
+  rotation_deg: 10
+  brightness: 0.1
+  zoom: 0.1
+
+loader:
+  batch_size: 32
+  shuffle: true
+  num_workers: 0
